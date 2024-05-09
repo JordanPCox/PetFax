@@ -8,8 +8,8 @@ def index():
         print(request.form)
         return redirect('/facts')
         
-    return 'Thanks for submitting a fun fact!'
+    return render_template('facts/index.html')
 
 @bp.route('/new')
 def new():
-    return render_template('new.html')
+    return render_template('facts/new.html')
